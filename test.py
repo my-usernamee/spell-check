@@ -1,12 +1,14 @@
-f = open("text.txt","r")
+"""f = open("text.txt","rb")
 content = f.read()
-words = content.split()
+words = content.split()"""
+
 
 def fun(dict_word,input_word):
     n=len(x)
     a_char=[]
     for letters in dict_word:
         a_char.append(letters)
+
     m=len(dict_word)
     old=[]
     if a_char[0]==lst[0]:
@@ -25,7 +27,7 @@ def fun(dict_word,input_word):
             rd3=new[j_oo]
             mini = min(rd1,rd2,rd3)
             mini_oo = mini+1
-            if a_char[i]==lst[i]:
+            if a_char[j]==lst[i]:
                 new.append(rd1)
             else:
                 new.append(mini_oo)
@@ -44,13 +46,12 @@ for letters in x:
 n=len(x)
 
 final_list=[]
-"""kwel = ["apke","appli","apply","gigachad","hello","orange","application","akpple","alarm"]
-for word_x in kwel :
-    fun(word_x,x)"""
 
-fun("apple",x)
+for word in words:
+    fun(word,x)
+
 final_list.sort(key = lambda x:x[1])
-print(final_list)
+print(final_list[0:20])
 
     
 
